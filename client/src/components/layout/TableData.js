@@ -15,13 +15,13 @@ function TableData() {
   const [search, setSearch] = useState("");
   const [sorting, setSorting] = useState({ field: "", order: "" });
 
-  const ITEMS_PER_PAGE = 50;
+  const ITEMS_PER_PAGE = 10;
 
   const headers = [
     { name: "No#", field: "id", sortable: false },
-    { name: "Route From", field: "routefrom", sortable: true },
-    { name: "Route To", field: "routeto", sortable: true },
-    { name: "Altitude", field: "altitude", sortable: true },
+    { name: "Route From", field: "routefrom", sortable: false },
+    { name: "Route To", field: "routeto", sortable: false },
+    { name: "Altitude", field: "altitude", sortable: false },
     { name: "Date Reported", field: "reportedAt", sortable: true },
   ];
 
@@ -73,6 +73,7 @@ function TableData() {
           </div>
         </div>
         <Table striped bordered hover>
+          <tr></tr>
           <thead
             headers={headers}
             onSorting={(field, order) => setSorting({ field, order })}

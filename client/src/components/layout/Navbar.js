@@ -16,7 +16,7 @@ class NavbarShow extends Component {
           <Nav>
             <Nav.Link href="#deets">Hello Guest</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              <Link to="/login">Login</Link>
+              <Link to={"/login"}>Login</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
