@@ -44,7 +44,7 @@ function TableData() {
 
     setTotalItems(computedData.length);
 
-    //Sorting comments
+    //Sorting data
     if (sorting.field) {
       const reversed = sorting.order === "desc" ? 1 : -1;
       computedData = computedData.sort(
@@ -83,7 +83,11 @@ function TableData() {
               <th>Route From</th>
               <th>Route To</th>
               <th>Altitude</th>
-              <th>Date Reported</th>
+              <th>
+                <button type="button" onClick={() => setSorting("reportedAt")}>
+                  Date Reported
+                </button>
+              </th>
             </tr>
           </thead>
 

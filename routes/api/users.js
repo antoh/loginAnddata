@@ -190,6 +190,7 @@ router.post("/login", (req, res) => {
 });
 router.get("/list", (req, res) => {
   Turbulence.find({})
+    .sort({ reportedAt: -1 })
     .then((turbulence) => {
       console.log("turbulence:", turbulence);
       res.json(turbulence);
